@@ -1,0 +1,34 @@
+@mixin make-grid-columns($size-prefix: "") {
+  @for $i from 1 through 12 {
+    .#{$size-prefix}kolom-#{$i} {
+      flex: 0 0 percentage($i / 12);
+      max-width: percentage($i / 12);
+      position: relative;
+      padding-right: $grid-gutter-width / 2;
+      padding-left: $grid-gutter-width / 2;
+    }
+  }
+
+    .#{$size-prefix}kolom-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        position: relative;
+        padding-right: $grid-gutter-width / 2;
+        padding-left: $grid-gutter-width / 2;
+    }
+
+    @include make-grid-columns();
+        @include media-breakpoint-up(sm) {
+        @include make-grid-columns('-sm'); 
+    }
+        @include media-breakpoint-up(md) {
+        @include make-grid-columns('-md'); 
+    }
+        @include media-breakpoint-up(lg) {
+        @include make-grid-columns('-lg'); 
+    }
+        @include media-breakpoint-up(xl) {
+        @include make-grid-columns('-xl'); 
+    }
+}

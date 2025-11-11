@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as var; 
+
+.btnsty {
+ display: inline-block;
+// ... styling dasar button lainnya (sudah benar)
+}
+
+// 🔥 INI ADALAH PERBAIKANNYA 🔥
+// Pastikan menggunakan 'var.$theme-colors'
+@each $name, $color in var.$theme-colors { 
+.btnsty-#{$name} { 
+ color: white; 
+ background-color: $color;
+ border-color: $color;
+   
+ &:hover, &:focus {
+ background-color: darken($color, 7.5%); 
+ border-color: darken($color, 10%);
+}
+
+&:active {
+ background-color: darken($color, 10%);
+ border-color: darken($color, 12.5%);
+}
+} 
+}

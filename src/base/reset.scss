@@ -1,0 +1,38 @@
+// src/base/_reset.scss
+
+// Atur box model agar padding/border tidak menambah ukuran elemen
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// Hapus margin default pada body
+body {
+  margin: 0;
+  padding: 0;
+  // Kita bisa mengatur font dasar di sini nanti
+  // font-family: $font-family-base; 
+}
+
+// Reset style untuk beberapa elemen
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+// Gambar tidak melebihi lebar kontainer
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; // Menghilangkan margin bawah default pada img
+}
+
+// Pastikan elemen form mewarisi font
+input, button, textarea, select {
+  font: inherit;
+}
+
+// Reset link default
+a {
+    text-decoration: none;
+    color: inherit;
+}

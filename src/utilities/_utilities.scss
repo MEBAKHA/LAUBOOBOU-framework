@@ -1,0 +1,75 @@
+// src/utilities/_utilities.scss
+
+// 1. VARIABLE IMPORT (Menggunakan namespace 'var')
+@use '../abstracts/variables' as var; 
+
+// 2. MIXIN IMPORT (Menggunakan @use yang benar)
+@use '../abstracts/mixins' as *; 
+
+// --- TEXT ALIGNMENT ---
+.textsty-start { text-align: left !important; }
+.textsty-center { text-align: center !important; }
+.textsty-end { text-align: right !important; }
+.textsty-justify { text-align: justify !important; }
+
+// Tambahkan responsivitas
+@include media-breakpoint-up(md) {
+  .textsty-md-start { text-align: left !important; }
+  .textsty-md-center { text-align: center !important; }
+  .textsty-md-end { text-align: right !important; }
+}
+
+@include media-breakpoint-up(lg) {
+  .textsty-lg-center { text-align: center !important; }
+}
+
+@include media-breakpoint-up(xl) {
+  .textsty-xl-end { text-align: right !important; }
+}
+
+// --- FONT WEIGHT (FW) ---
+.fw-super    { font-weight: 900 !important; }
+.fw-ngegas  { font-weight: 700 !important; }
+.fw-semgas  { font-weight: 600 !important; }
+.fw-calm  { font-weight: 400 !important; }
+.fw-santuy  { font-weight: 300 !important; }
+.fw-eibit    { font-weight: 200 !important; }
+.fw-tipis     { font-weight: 100 !important; }
+
+// --- TEXT TRANSFORM, OVERFLOW, STYLE, DECORATION ---
+.textsty-lowercase  { text-transform: lowercase !important; }
+.textsty-uppercase  { text-transform: uppercase !important; }
+.textsty-capitalize { text-transform: capitalize !important; }
+
+.textsty-truncate {
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+ display: block;
+}
+.textsty-italic { font-style: italic !important; }
+.textsty-normal { font-style: normal !important; }
+.textsy-normal-to-italic {
+ font-style: normal;
+ &:hover {
+font-style: italic !important;
+ }
+}
+.textsty-decoration-none { text-decoration: none !important; }
+.textsty-decoration-underline { text-decoration: underline !important; }
+
+// --- DISPLAY UTILITIES (Lets- berubah menjadi Dsty-) ---
+// (Anda dapat mengubah lets- menjadi dsty- agar konsisten dan menghindari kebingungan)
+.lets-block { display: block !important; }
+.lets-inline { display: inline !important; }
+.lets-none { display: none !important; }
+.lets-inline-block { display: inline-block !important; }
+
+
+// --- 🎨 TEXT COLOR UTILITIES BARU ---
+// 🔥 PERBAIKAN: Gunakan var.$theme-colors 🔥
+@each $name, $color in var.$theme-colors {
+ .textsty-#{$name} {
+ color: $color !important;
+ }
+}

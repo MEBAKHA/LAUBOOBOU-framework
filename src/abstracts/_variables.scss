@@ -1,0 +1,64 @@
+
+// --- 🎨 Colors (Warna-warna untuk Tombol, Background, dll.) ---
+$blue:          #007bff;
+$indigo:        #6610f2;
+$purple:        #6f42c1;
+$pink:          #e83e8c;
+$red:           #eb4f5f;
+$orange:        #fd7e14;
+$yellow:        #ffc107;
+$green:         #28a745;
+$teal:          #20c997;
+$cyan:          #17a2b8;
+$coklat:        #795548;
+$light:         #e1ad2b;
+
+// Peta Warna untuk Akses Mudah
+$theme-colors: (
+  "random":    #ffffff,
+  "bhan":      $blue,
+  "merite":    $green,
+  "rival":     $purple,
+  "mr" :       $indigo,
+  "ger" :      $coklat,
+  "sigma":     $cyan,
+  "mark":      $pink,
+  "zk ":        $light,
+  "kr":        $orange,
+  "bawtie":     $yellow,
+  "zora":       #16467b,
+  "mucur":     #460924,
+  "wark":     #5c5a5a,
+  "clief":     #000000,
+  "semi-toxic": #ff6a00,
+  "toxic ":   $red,
+  "randomXtoxic": #461f12,
+  "bhanXtoxic": $blue,
+  "meriteXtoxic": #7E8942,
+  "rivalXtoxic": #E12380,
+  "mrXtoxic": #9F2F36,
+  "gerXtoxic": #D95110,
+  "sigmaXtoxic": #F3346B,
+  "markXtoxic": #FE6155,
+  "zkXtoxic": #D73700,
+  "krmXtoxic": #FD5C22
+);
+
+
+
+// --- 📏 Spacing (Pengaturan Jarak) ---
+$spacer: 1rem; // 16px standar
+$spacers: (
+  0: 0,
+  1: ($spacer * 0.25), // 4px
+  2: ($spacer * 0.5),  // 8px
+  3: $spacer,          // 16px
+  4: ($spacer * 1.5),  // 24px
+  5: ($spacer * 3)     // 48px
+);
+
+// --- 📱 Breakpoints (Titik Henti Responsif) ---
+$breakpoint-sm: 576px; // Small devices (Ponsel Landscape)
+$breakpoint-md: 768px; // Medium devices (Tablet)
+$breakpoint-lg: 992px; // Large devices (Desktop)
+$breakpoint-xl: 1200px; // Extra large devices
