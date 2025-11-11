@@ -6,7 +6,7 @@
 
 // 2. BASE (RESET HANYA SATU KALI)
 @use 'base/reset';   // <--- HANYA ADA DI SINI
-@use 'base/typography';
+// @use 'base/typography'; // (dikomentari karena file tidak ada di folder `base/`)
 // ... dll.
 
 // 3. COMPONENTS
@@ -14,9 +14,8 @@
 // ... dll.
 
 // 4. LAYOUTS
-@use 'layouts/grid';
+@use 'layout/grid';
 // ... dll.
 
 // 5. UTILITIES
-@use 'utilities/spacing';
 @use 'utilities/utilities';

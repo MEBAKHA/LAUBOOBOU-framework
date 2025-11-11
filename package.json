@@ -1,0 +1,15 @@
+{
+  "name": "lauboobou",
+  "version": "0.1.0",
+  "description": "SCSS framework (lauboobou)",
+  "main": "dist/main.css",
+  "scripts": {
+    "build": "sass src/_main.scss dist/main.css --no-source-map --style=expanded",
+    "watch": "sass --watch src/_main.scss:dist/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.93.3"
+  },
+  "keywords": ["scss","sass","css","framework"],
+  "license": "MIT"
+}
