@@ -3,6 +3,7 @@
 // 1. ABSTRACTS
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
+@use 'sass:color';
 
 // 2. BASE (RESET HANYA SATU KALI)
 @use 'base/reset';   // <--- HANYA ADA DI SINI
